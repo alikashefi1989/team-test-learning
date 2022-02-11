@@ -17,11 +17,20 @@ function useFetch<T>(url: string): IResponse<T> {
         setLoader(true);
         setData([]);
         setError(undefined);
-        function fetchUsers() {
-            fetch(url)
-                .then(response => response.json())
-                .then(list => { setLoader(false); setData(list) })
-                .catch(e => { setLoader(false); setError(e) })
+
+        async function fetchUsers() {
+            console.log('fetch callled')
+            try {
+                const res = await fetch(url);
+                if (res.status !== 200) throw new Error(res.status + '');
+                const data = await res.json();
+
+                setLoader(false);
+                setData(data);
+            } catch (error) {
+                setLoader(false);
+                setError(error);
+            }
         }
         fetchUsers();
     }, [url]);

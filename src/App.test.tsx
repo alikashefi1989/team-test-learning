@@ -39,12 +39,6 @@ Array [
   >
     click me
   </button>,
-  <div
-    onClick={[Function]}
-  />,
-  <div>
-    jhkh
-  </div>,
   <button
     data-testid="custom-element"
     onClick={[Function]}
@@ -52,14 +46,11 @@ Array [
     load
   </button>,
   <button
-    data-testid="custom-element2"
+    data-testid="fail-button"
     onClick={[Function]}
   >
-    load fail
+    fail button
   </button>,
-  <div>
-    data...
-  </div>,
 ]
 `);
 });
