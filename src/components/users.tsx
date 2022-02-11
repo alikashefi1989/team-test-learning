@@ -5,29 +5,42 @@ function Users() {
 
     const [url, setUrl] = useState('');
     const { loading, data, error } = useFetch<any>(url);
-
+    const MyUrl = 'https://jsonplaceholder.typicode.com/users';
 
     return (
         <>
             <div onClick={() => { }}></div>
+            <div>jhkh</div>
             <button
                 data-testid="custom-element"
                 onClick={() => {
-                    setUrl('https://jsonplaceholder.typicode.com/users')
+                    setUrl(MyUrl)
                 }}
             >
                 load
             </button>
+            <button
+                data-testid="custom-element2"
+                onClick={() => {
+                    setUrl(MyUrl + "sss")
+                }}
+            >
+                load fail
+            </button>
             {
                 loading
-                    ? 'Loading...'
+                    ? <span>Loading...</span>
                     : error
-                        ? 'Error'
-                        : data.map((item: any, i: number) => {
-                            return <pre>
-                                {JSON.stringify(item)}
-                            </pre>
-                        })
+                        ? 'Error...'
+                        : <div>
+                            data...
+                            {data.map((item: any, i: number) => {
+                                return <pre>
+
+                                    {JSON.stringify(item)}
+                                </pre>
+                            })}
+                        </div>
             }
         </>
     )

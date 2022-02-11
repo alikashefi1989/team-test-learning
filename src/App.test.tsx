@@ -42,12 +42,24 @@ Array [
   <div
     onClick={[Function]}
   />,
+  <div>
+    jhkh
+  </div>,
   <button
     data-testid="custom-element"
     onClick={[Function]}
   >
     load
   </button>,
+  <button
+    data-testid="custom-element2"
+    onClick={[Function]}
+  >
+    load fail
+  </button>,
+  <div>
+    data...
+  </div>,
 ]
 `);
 });
