@@ -16,7 +16,7 @@ describe('users component', () => {
       <Users />,
     );
 
-    const button = getByTestId('custom-element');
+    const button = getByTestId('load-button');
     fireEvent.click(button);
     const loading = getByText('Loading...');
     expect(loading).toBeInTheDocument();
@@ -31,17 +31,21 @@ describe('users component', () => {
 
   });
 
-  it('should show an error by clicking on fail button', async () => {
+  it('should show an error by clicking on load button', async () => {
+    jest.spyOn(global, 'fetch').mockImplementation(
+      ()=> Promise.reject({status:500})
+    );
+
     const { getByText, getByTestId, queryByTestId } = render(
       <Users />,
     );
 
-    const failButton = getByTestId('fail-button');
-    fireEvent.click(failButton);
+    const loadButton = getByTestId('load-button');
+    fireEvent.click(loadButton);
 
     const loading = getByText('Loading...');
     expect(loading).toBeInTheDocument();
-    
+
     const textError = await waitFor<HTMLElement>(() => getByText('Error...'));
     expect(textError).toBeInTheDocument();
 

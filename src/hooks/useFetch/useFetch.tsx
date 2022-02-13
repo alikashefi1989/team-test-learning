@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 
 interface IResponse<T> {
     loading: boolean;
-    data: Array<T>;
+    data:any| Array<T>;
     error: any;
 }
 
 function useFetch<T>(url: string): IResponse<T> {
 
     const [loader, setLoader] = useState<boolean>(false);
-    const [data, setData] = useState<Array<T>>([]);
+    const [data, setData] = useState<any>();
     const [error, setError] = useState<any>();
 
     useEffect(() => {
@@ -19,10 +19,8 @@ function useFetch<T>(url: string): IResponse<T> {
         setError(undefined);
 
         async function fetchUsers() {
-            console.log('fetch callled')
             try {
                 const res = await fetch(url);
-                if (res.status !== 200) throw new Error(res.status + '');
                 const data = await res.json();
 
                 setLoader(false);

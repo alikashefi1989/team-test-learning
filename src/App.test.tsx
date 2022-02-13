@@ -40,16 +40,10 @@ Array [
     click me
   </button>,
   <button
-    data-testid="custom-element"
+    data-testid="load-button"
     onClick={[Function]}
   >
     load
-  </button>,
-  <button
-    data-testid="fail-button"
-    onClick={[Function]}
-  >
-    fail button
   </button>,
 ]
 `);
