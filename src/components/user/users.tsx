@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useFetch from "../hooks/useFetch/useFetch";
+import useFetch from "../../hooks/useFetch/useFetch";
 
 function Users() {
     const [url, setUrl] = useState('');

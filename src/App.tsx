@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import Users from './components/users';
+import Users from './components/user/users';
 
 function App() {
 
