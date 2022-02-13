@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`login compoentn should render login component 1`] = `
+<div>
+  <div>
+    <label
+      htmlFor="username"
+    >
+      username
+    </label>
+    <input
+      id="username"
+      name="username"
+      type="text"
+    />
+  </div>
+  <div>
+    <label
+      htmlFor="password"
+    >
+      password
+    </label>
+    <input
+      id="password"
+      name="password"
+      type="text"
+    />
+  </div>
+  <div>
+    <button
+      onClick={[Function]}
+      type="submit"
+    >
+      submit
+    </button>
+  </div>
+</div>
+`;
