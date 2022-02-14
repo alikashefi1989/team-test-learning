@@ -23,6 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
+    "e2e":"testcafe chrome e2e/**",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
