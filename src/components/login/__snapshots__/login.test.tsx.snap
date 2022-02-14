@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`login compoentn should render login component 1`] = `
+exports[`login component should render login component 1`] = `
 <div>
   <div>
     <label
@@ -9,6 +9,7 @@ exports[`login compoentn should render login component 1`] = `
       username
     </label>
     <input
+      data-testid="username-input"
       id="username"
       name="username"
       type="text"
@@ -21,6 +22,7 @@ exports[`login compoentn should render login component 1`] = `
       password
     </label>
     <input
+      data-testid="password-input"
       id="password"
       name="password"
       type="text"
@@ -28,11 +30,14 @@ exports[`login compoentn should render login component 1`] = `
   </div>
   <div>
     <button
+      data-testid="submit-button"
       onClick={[Function]}
       type="submit"
     >
       submit
     </button>
   </div>
+  <br />
+  <br />
 </div>
 `;

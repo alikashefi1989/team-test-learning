@@ -45,6 +45,49 @@ Array [
   >
     load
   </button>,
+  <br />,
+  <br />,
+  <br />,
+  <br />,
+  <div>
+    <div>
+      <label
+        htmlFor="username"
+      >
+        username
+      </label>
+      <input
+        data-testid="username-input"
+        id="username"
+        name="username"
+        type="text"
+      />
+    </div>
+    <div>
+      <label
+        htmlFor="password"
+      >
+        password
+      </label>
+      <input
+        data-testid="password-input"
+        id="password"
+        name="password"
+        type="text"
+      />
+    </div>
+    <div>
+      <button
+        data-testid="submit-button"
+        onClick={[Function]}
+        type="submit"
+      >
+        submit
+      </button>
+    </div>
+    <br />
+    <br />
+  </div>,
 ]
 `);
 });

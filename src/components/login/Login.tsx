@@ -1,11 +1,12 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function Login() {
     const username = useRef<any>(null);
     const password = useRef<any>(null);
+    const [loginData, setLoginData] = useState<any>(null);
 
     useEffect(() => {
-        username.current.focus();
+        username.current?.focus();
     }, []);
 
     async function submitForm() {
@@ -14,7 +15,6 @@ export default function Login() {
             username: username.current.value,
             password: password.current.value
         }
-        console.log(data);
 
         try {
             const res = await fetch('http://localhost:5004/users', {
@@ -24,9 +24,8 @@ export default function Login() {
                     'Content-Type': 'application/json'
                 },
             });
-            console.log('resss', res);
+            setLoginData(await res.json());
         } catch (error) {
-            console.log('erorrrr', error);
         }
 
     }
@@ -36,17 +35,24 @@ export default function Login() {
             <label htmlFor="username">username</label>
             <input type="text" name="username" id="username"
                 ref={username}
+                data-testid="username-input"
             />
         </div>
         <div>
             <label htmlFor="password">password</label>
             <input type="text" id="password" name="password"
                 ref={password}
+                data-testid="password-input"
             />
         </div>
 
         <div>
-            <button type="submit" onClick={submitForm}>submit</button>
+            <button type="submit" onClick={submitForm}
+                data-testid="submit-button"
+            >submit</button>
         </div>
+
+        <br /><br />
+        {loginData && <pre data-testid="data-response">{JSON.stringify(loginData)}</pre>}
     </div>
 }
