@@ -49,5 +49,8 @@
       "!src/index___.tsx",
       "!src/react-app-env.d.ts"
     ]
+  },
+  "devDependencies": {
+    "testcafe": "^1.18.3"
   }
 }
