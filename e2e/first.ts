@@ -7,7 +7,7 @@ test('My first test', async t => {
 const name = 'ali rajayi'
 
     await t
-        .setTestSpeed(.2)
+        // .setTestSpeed(.2)
         .typeText('#developer-name', name)
         // .wait(1000)
         // .resizeWindow(200, 200)
