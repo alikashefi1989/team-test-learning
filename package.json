@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
-    "e2e":"testcafe chrome e2e/**",
+    "e2e": "testcafe chrome e2e/**",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -52,6 +52,9 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.22",
     "testcafe": "^1.18.3"
   }
 }
