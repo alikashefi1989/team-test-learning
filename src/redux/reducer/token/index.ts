@@ -13,5 +13,5 @@ export function reducer(
         default:
             return null;
     }
-    return preState ? preState : null
+    // return preState ? preState : null
 }
