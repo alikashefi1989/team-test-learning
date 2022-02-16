@@ -1,0 +1,4 @@
+export enum REDUX_ACTIONS {
+    SET_TOKEN = 'SET_TOKEN',
+    EMPTY_TOKEN = 'EMPTY_TOKEN',
+}
