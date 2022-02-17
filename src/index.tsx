@@ -7,6 +7,7 @@ import Post from './components/post/Post';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistedStore, store } from "./redux/store"
+import SavePost from './components/post/SavePost';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,8 @@ ReactDOM.render(
           <Routes>
             <Route path="/" caseSensitive element={<App />} />
             <Route path="/post" caseSensitive element={<Post />} />
+            <Route path="/post/create" caseSensitive element={<SavePost />} />
+            <Route path="/post/edit/:id" caseSensitive element={<SavePost />} />
             <Route path="*" caseSensitive element={<App />} />
           </Routes>
         </Router>
